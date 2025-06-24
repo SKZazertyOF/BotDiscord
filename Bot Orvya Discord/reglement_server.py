@@ -58,20 +58,15 @@ async def envoyer_regles_serveur(bot):
          "- **2ème fois** : Débuffs permanents\n"
          "- **3ème fois** : Bannissement\n"
          "*« Si vous continuez après ça, vous êtes juste chiant »*"),
+    
         
-        ("3️⃣ **X-Ray - Règles spéciales**",
-         "✅ **Autorisé UNIQUEMENT** :\n"
-         "- Pendant les **2 premiers jours**\n"
-         "- Pour localiser des dungeons\n\n"
-         "❌ **Interdit après** :\n"
-         "- Pour miner des diamants/anciennes débris"),
+        ("3️⃣ **Grief & Vol**",
+        "Le vol est toléré, mais toute destruction volontaire de blocs (grief) est interdite :\n"
+        "- Remboursement des dégâts\n"
+        "- Bannissement temporaire ou définitif en cas de récidive"),
+
         
-        ("4️⃣ **Grief & Vol**",
-         "Tout vol ou destruction sera sanctionné par :\n"
-         "- Remboursement des dégâts\n"
-         "- Bannissement temporaire"),
-        
-        ("5️⃣ **Constructions**",
+        ("4️⃣ **Constructions**",
          "Pas de builds NSFW/racistes. Les builds trolls doivent :\n"
          "- Être identifiés comme tels\n"
          "- Être loin des zones principales")
@@ -80,6 +75,6 @@ async def envoyer_regles_serveur(bot):
     for titre, description in regles:
         embed.add_field(name=titre, value=description, inline=False)
     
-    embed.set_footer(text="Les modérateurs ont le dernier mot | Bon jeu !")
+    embed.set_footer(text="Les modérateurs ont le dernier mot | Bon jeu ! | Coffres non protégés = vol permis (plugins)")
     
     await salon.send(embed=embed, view=BoutonAcceptationServeur())
