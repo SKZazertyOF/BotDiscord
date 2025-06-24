@@ -24,6 +24,8 @@ SALON_ANNONCES_ID = 1385975846275256420  # Salon pour les annonces
 async def on_ready():
     print(f"{bot.user} est connecté")
     
+    await envoyer_regles_serveur(bot)
+
     # Initialisation des vues persistantes
     bot.add_view(BoutonAcceptationServeur())
     
